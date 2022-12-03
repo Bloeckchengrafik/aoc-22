@@ -48,7 +48,7 @@ def stage(data: list[str]) -> None:
          (0 if you lost, 3 if the round was a draw, and 6 if you won).
         """
 
-        current_score = input_round[1] # The score for the shape you selected
+        current_score = input_round[1]  # The score for the shape you selected
 
         if input_round[0] == input_round[1]:
             current_score += 3

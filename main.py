@@ -9,6 +9,8 @@ from dec03.stage1 import stage as dec03_stage1
 from dec03.stage2 import stage as dec03_stage2
 from dec04.stage1 import stage as dec04_stage1
 from dec04.stage2 import stage as dec04_stage2
+from dec05.stage1 import stage as dec05_stage1
+from dec05.stage2 import stage as dec05_stage2
 
 app = typer.Typer()
 
@@ -47,6 +49,12 @@ def main(day: int, stage: int, file: str = typer.Option(..., "--file", "-f", hel
     elif day == 4 and stage == 2:
         typer.echo("Running day 4 stage 2: Camp Cleanup (part 2)")
         dec04_stage2(data)
+    elif day == 5 and stage == 1:
+        typer.echo("Running day 5 stage 1: Supply Stacks (part 1)")
+        dec05_stage1(data)
+    elif day == 5 and stage == 2:
+        typer.echo("Running day 5 stage 2: Supply Stacks (part 2)")
+        dec05_stage2(data)
     else:
         typer.echo("Not implemented yet")
 
